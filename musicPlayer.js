@@ -93,7 +93,7 @@ const songs = [
   {
     title: 'Love Me Like That',
     audio:' Media-Songs/[SPOTDOWNLOADER.COM] Love Me Like That.mp3',
-    cover: 'Media-Songs-Cover/Love Me Like That.jpg'
+    cover: 'Media-Songs-Cover/Love me Like That.jpg'
   },
 
   {
