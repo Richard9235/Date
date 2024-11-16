@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yes! - Date Invitation</title>
+        <link rel="stylesheet" href="./yes_style.css">
+        <link rel="stylesheet" href="fp.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head> 
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="hurah">Hurrayyyy!!</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media0.giphy.com/media/T86i6yDyOYz7J6dPhf/giphy.gif" alt="Cute animated illustration">
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Music Player -->
+            <div class="music-container">
+                <div class="top-row">
+                    <div class="img-container">
+                        <img src="images/covers/default.jpg" alt="music-cover" id="cover" />
+                    </div>
+                    
+                    <div class="music-info">
+                        <h4 id="title">Song Title</h4>
+                        <div class="progress-container">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <audio src="" id="audio"></audio>
+
+                <div class="navigation">
+                    <button id="prev" class="action-btn" title="Previous Track">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </button>
+                    <button id="play" class="action-btn action-btn-big" title="Play/Pause">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <button id="next" class="action-btn" title="Next Track">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <h1 class="header_text">Our Date Adventure Map! ✨</h1>
+            <br>
+            <div class="agenda-container">
+                <ul class="results">
+                    <li class="result">
+                        <img src="Media-Agenda/1st.jpg" width="500" height="500" alt="">
+                    </li>
+                    <li class="result">
+                        <img src="Media-Agenda/2nd.jpg" width="500" height="500" alt="">
+                    </li>
+                    <li class="result">
+                        <img src="https://cdn.phonebooky.com/blog/wp-content/uploads/2022/11/27172218/mendokoro-cover.jpg" width="500" height="500" alt="">
+                    </li>
+                    <li class="result">
+                        <img src="https://ik.imagekit.io/tvlk/blog/2024/09/shutterstock_1647680185.jpg?tr=dpr-2,w-675" width="500" height="500" alt="">
+                    </li>
+                    <li class="result">
+                        <img src="https://images.squarespace-cdn.com/content/v1/636b5e138fd7c9613e2a8b61/1697040165219-HWER5O0G5O2KO8T7WRGV/Lugano+1.jpg" width="500" height="500" alt="">
+                    </li>
+                    <li class="result">
+                        <img src="https://www.bworldonline.com/wp-content/uploads/2022/10/BGC-3D-LED-_BB20890.jpg" width="500" height="500" alt="">
+                    </li>
+                    <li class="result">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2krylgM5_29WsMkbNDLCUs2p-kKph7TpzSn19XRc0IBu8m2w_cyD2xBiOA_wCOeh3YK_mpwIKjII8nxY8RsKT53FSDb57aoiDhX8V0KagJNCSt2CgTMI4KXLoqxjABjLatj8gCENDonc/s1600/P1220325.JPG" width="500" height="500" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="musicPlayer.js"></script>
+    </body> 
+</html>

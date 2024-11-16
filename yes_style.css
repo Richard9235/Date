@@ -1,0 +1,159 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+}
+.hurah{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -70px;
+}
+.header_text {
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.content-wrapper {
+    max-width: 100%;
+    padding: 20px;
+}
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+  
+  ul {
+    display: flex;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    padding: 0;
+  }
+  
+  img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease;
+  }
+  
+  ul:is(:hover, :focus-within) img {
+    opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+    filter: grayscale(calc(1 - var(--active-lerp, 0)));
+  }
+  
+  :root {
+    --lerp-0: 1;
+    --lerp-1: 0.5787037;
+    --lerp-2: 0.2962963;
+    --lerp-3: 0.125;
+    --lerp-4: 0.037037;
+    --lerp-5: 0.0046296;
+    --lerp-6: 0;
+  }
+  
+  a {
+    outline-offset: 4px;
+  }
+  
+  li {
+    flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+    transition: flex 0.2s ease;
+  }
+  
+  li:is(:hover, :focus-within) {
+    --active-lerp: var(--lerp-0);
+    z-index: 7;
+  }
+  li:has( + li:is(:hover, :focus-within)),
+  li:is(:hover, :focus-within) + li {
+    --active-lerp: var(--lerp-1);
+    z-index: 6;
+  }
+  li:has( + li + li:is(:hover, :focus-within)),
+  li:is(:hover, :focus-within) + li + li {
+    --active-lerp: var(--lerp-2);
+    z-index: 5;
+  }
+  li:has( + li + li + li:is(:hover, :focus-within)),
+  li:is(:hover, :focus-within) + li + li + li {
+    --active-lerp: var(--lerp-3);
+    z-index: 4;
+  }
+  li:has( + li + li + li + li:is(:hover, :focus-within)),
+  li:is(:hover, :focus-within) + li + li + li + li {
+    --active-lerp: var(--lerp-4);
+    z-index: 3;
+  }
+  li:has( + li + li + li + li + li:is(:hover, :focus-within)),
+  li:is(:hover, :focus-within) + li + li + li + li + li {
+    --active-lerp: var(--lerp-5);
+    z-index: 2;
+  }
+  li:has( + li + li + li + li + li + li:is(:hover, :focus-within)),
+  li:is(:hover, :focus-within) + li + li + li + li + li + li {
+    --active-lerp: var(--lerp-6);
+    z-index: 1;
+  }
+
+.results img {
+    pointer-events: none;
+    -webkit-user-select: none;  /* Safari 3+ */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Standard syntax */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.music-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 300px;
+    height:120px;
+}
+
+.result {
+    flex: 1;
+    min-width: 0;
+    transition: all 0.3s ease;
+    padding: 0 4px;
+}
+
+.result:hover {
+    flex: 2;
+    transform: translateY(-5px);
+}
+
+.results {
+    gap: 8px;
+    padding: 0 20px;
+}

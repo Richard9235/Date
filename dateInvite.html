@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Date Invitation</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="fp.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head> 
+    <body>
+        <div class="container">
+            <div class="back-container">
+                <button onclick="window.location.href='index.html'" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+            </div>
+            <div>
+                <h1 class="header_text">Do you wanna go out with me to BGC?</h1>
+                <h1 class="header_text">Are you free on November 24?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class="buttons">
+                <button class="btn" id="yesButton" onclick="nextPage()" title="Yes">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()" title="No">No</button>
+            </div>
+        </div>
+        
+        <!-- Music Player -->
+        <div class="music-container">
+            <div class="top-row">
+                <div class="img-container">
+                    <img src="images/covers/default.jpg" alt="music-cover" id="cover" />
+                </div>
+                
+                <div class="music-info">
+                    <h4 id="title">Song Title</h4>
+                    <div class="progress-container">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <audio src="" id="audio"></audio>
+
+            <div class="navigation">
+                <button id="prev" class="action-btn" title="Previous">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big" title="Play">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button id="next" class="action-btn" title="Next">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script>
+            function nextPage() {
+                window.location.href = "yes.html";
+            }
+            
+            function moveButton() {
+                var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                document.getElementById('noButton').style.left = `${x}px`;
+                document.getElementById('noButton').style.top = `${y}px`;
+            }
+        </script>
+        <script src="musicPlayer.js"></script>
+    </body> 
+</html>
