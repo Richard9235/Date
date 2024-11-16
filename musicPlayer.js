@@ -93,7 +93,7 @@ const songs = [
   {
     title: 'Love Me Like That',
     audio:' Media-Songs/[SPOTDOWNLOADER.COM] Love Me Like That.mp3',
-    cover: 'Media-Songs-Cover/Love me Like That.jpg'
+    cover: 'Media-Songs-Cover/Love Me Like That.jpg'
   },
 
   {
@@ -141,7 +141,7 @@ function playSong() {
   musicContainer.classList.add('play');
   playBtn.querySelector('i.fa-solid').classList.remove('fa-play');
   playBtn.querySelector('i.fa-solid').classList.add('fa-pause');
-  document.querySelector('.img-container').classList.add('play');
+  cover.classList.add('rotate');
   audio.play();
   savePlayerState();
 }
@@ -150,7 +150,7 @@ function pauseSong() {
   musicContainer.classList.remove('play');
   playBtn.querySelector('i.fa-solid').classList.add('fa-play');
   playBtn.querySelector('i.fa-solid').classList.remove('fa-pause');
-  document.querySelector('.img-container').classList.remove('play');
+  cover.classList.remove('rotate');
   audio.pause();
   savePlayerState();
 }
