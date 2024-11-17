@@ -81,7 +81,7 @@ const songs = [
   {
     title: 'Like the Movies',
     audio:' Media-Songs/[SPOTDOWNLOADER.COM] Like the Movies.mp3',
-    cover: 'Media-Songs-Cover/Like the Movies.jpg'
+    cover: 'Media-Songs-Cover/Like The Movies.jpg'
   },
 
   {
