@@ -25,6 +25,16 @@ body {
     margin-top: 20px;
     margin-bottom: 0px;
 }
+
+@media screen and (max-width: 768px) {
+    h1.header_text {
+        font-size: 28px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        padding: 0 10px;
+    }
+}
+
 .content-wrapper {
     max-width: 100%;
     padding: 20px;
@@ -132,15 +142,6 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.music-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 100;
-    width: 300px;
-    height:120px;
-}
-
 .result {
     flex: 1;
     min-width: 0;
@@ -182,4 +183,81 @@ body {
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+/* Base music player styles */
+.music-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #ffe6eb; 
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px 10px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.top-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.music-info {
+    flex-grow: 1;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #333;
+}
+
+.action-btn-big {
+    font-size: 1.2em;
+}
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    .music-container {
+        position: fixed;
+        top: 20px;
+        bottom: auto;
+        right: 10px;
+        width: 250px;
+        background: rgba(255, 255, 255, 0.15);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .music-info h4 {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .action-btn {
+        color: white;
+    }
 }
